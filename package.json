@@ -1,0 +1,40 @@
+{
+  "name": "wss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "12.17.x"
+  },
+  "scripts": {
+    "startt": "pm2-runtime start ecosystem.config.js --env production",
+    "start": "node ./server/index.js",
+    "ss": "nodemon ./server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bufferutil": "^4.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "fs": "0.0.1-security",
+    "helmet": "^4.1.0",
+    "https": "^1.0.0",
+    "ip": "^1.1.5",
+    "joi": "^17.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.0",
+    "pm2": "^4.4.1",
+    "utf-8-validate": "^5.0.2",
+    "ws": "^7.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
