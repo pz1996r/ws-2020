@@ -11,7 +11,7 @@ require("./startup/db")();
 require("./startup/routes")(app);
 require("./startup/jwt")();
 
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 3000;
 // const index = httpsServer.listen(port, () => {
 //   console.log(`HTTPS Server running on port ${port}`);
 // });
