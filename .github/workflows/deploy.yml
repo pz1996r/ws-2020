@@ -28,7 +28,6 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
           script: |
-            pkill node
             cd /var/www/ws.develoopers.pl/
             npm install --production
             pm2 restart server/index.js
