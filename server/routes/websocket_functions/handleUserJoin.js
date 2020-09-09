@@ -15,6 +15,8 @@ module.exports = function handleUserJoin({ room }, userIP, ws, userAgent) {
   }
   function removeClearRoomTimer() {
     const clearRoomFunction = rooms[room]["clearRoomTimer"];
+    console.log(rooms[room]["clearRoomTimer"], "onJOIN");
+    //tutaj jest problem !!!
     clearTimeout(clearRoomFunction);
     rooms[room]["clearRoomTimer"] = null;
   }
