@@ -27,10 +27,10 @@ router.post("/", async (req, res) => {
   }
 
   const token = user ? user.generateAuthToken() : admin.generateAuthToken();
-  const data = user
-    ? { data: "logged in" }
-    : { data: "logged in", isAdmin: true };
-  res.header("x-auth-token", token).send(data);
+  res
+    .header("x-auth-token", token)
+    .header(`is-${!user ? "admin" : "user"}`, !user)
+    .send({ data: "logged in" });
 });
 
 function validate(user) {
