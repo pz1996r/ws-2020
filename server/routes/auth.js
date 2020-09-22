@@ -27,7 +27,10 @@ router.post("/", async (req, res) => {
   }
 
   const token = user ? user.generateAuthToken() : admin.generateAuthToken();
-  res.header("x-auth-token", token).send({ data: "logged in", status: !!user });
+  const data = user
+    ? { data: "logged in" }
+    : { data: "logged in", isAdmin: true };
+  res.header("x-auth-token", token).send(data);
 });
 
 function validate(user) {
